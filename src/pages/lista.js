@@ -22,7 +22,7 @@ export default class Lista extends Component{
         const listagem = this.state.vetor
         return(
             <div>
-                <Link to='/Index'><h1>Pagina Anterior</h1></Link>
+                <Link to='/'><h1>Pagina Anterior</h1></Link>
                 {listagem.map(obj => (
                     <ul key={obj.id}>
                         <li>{obj.id}</li>
