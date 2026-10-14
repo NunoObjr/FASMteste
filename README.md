@@ -1,10 +1,10 @@
 # FASM Teste
 
-Aplicação web em **React** criada como **teste técnico**: tem uma página inicial e uma página de **listagem de cervejarias** consumindo a API pública [Open Brewery DB](https://www.openbrewerydb.org/), exibindo identificador, nome, cidade e país de cada item.
+Aplicação web em **React** criada como **teste técnico**, com duas telas: um **formulário de cadastro** (CNPJ, CPF, CEP, razão social, nome e endereço) com validação no cliente e uma **listagem de cervejarias** que consome a API pública [Open Brewery DB](https://www.openbrewerydb.org/), exibindo identificador, nome, cidade e país de cada item.
 
 ## Funcionalidades
 
-- Página inicial (`/`) com navegação para a lista
+- Página inicial (`/`) com formulário de cadastro: valida tamanho e formato de CNPJ (11 dígitos numéricos), CPF (11) e CEP (8), guarda os valores no `localStorage` e dá acesso à lista
 - Página `/lista`: busca paginada em `GET /breweries?page=25` e renderização dos resultados
 - Cliente HTTP centralizado, preparado para anexar um **token de autenticação** às requisições
 
@@ -29,7 +29,7 @@ src/
   index.js
   routes.js
   pages/
-    index.js        # página inicial
+    index.js        # formulário de cadastro com validações
     lista.js        # listagem de cervejarias
   services/
     api.js          # Axios + interceptor de autenticação
